@@ -21,7 +21,7 @@ class PrezzoDAO:
             return None
 
         cursor = cnx.cursor(dictionary=True)
-        query = """ SELECT * FROM prezzo WHERE id_distributore = %s"""
+        query = """ SELECT * FROM prezzo WHERE id_distributore = %s """
         try:
             cursor.execute(query, (id_distributore,))
             for row in cursor:
